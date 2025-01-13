@@ -37,7 +37,7 @@ const CartItem = ({ item }) => {
       <h3>{detail.model}</h3>
       <p>{detail.price * quantity}</p>
 
-      <div className="w-20 flex justify-between">
+      <div className="w-20 flex justify-center gap-2">
         <button
           className="bg-gray-200 rounded-full w-6 h-6 text-cyan-600 flex items-center justify-center"
           onClick={handleMinusQuantity}

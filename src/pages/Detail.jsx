@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import pcs from "../data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/cart";
+import { motion } from "framer-motion";
 
 const Detail = () => {
   const { slug } = useParams();
@@ -56,13 +57,13 @@ const Detail = () => {
         <div className="flex flex-col  gap-5 width-50% justify-center p-5 ">
           <h1>
             {" "}
-            <strong className="text-3xl ">Brand:</strong> {details.brand}
+            <strong className="text-3xl">Brand:</strong> {details.brand}
           </h1>
           <h1>
-            <strong className="text-3xl ">model:</strong> {details.model}
+            <strong className="text-3xl">model:</strong> {details.model}
           </h1>
           <h1>
-            <strong className="text-3xl ">cpu:</strong> {details.CPU}
+            <strong className="text-3xl">cpu:</strong> {details.CPU}
           </h1>
           <h1>
             <strong className="text-3xl ">gpu:</strong> {details.GPU}
@@ -87,12 +88,13 @@ const Detail = () => {
               -
             </button>
           </div>
-          <button
+          <motion.button
+            whileHover={{ scale: 1.5 }}
             className="bg-slate-900 text-white px-7 rounded-xl shadow-2xl"
             onClick={handleAddToCart}
           >
             add to cart
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>
